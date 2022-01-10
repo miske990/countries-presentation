@@ -83,15 +83,26 @@ export class HomeComponent implements OnInit {
   }
 
   details(country: any) {
-    let currencies: any = Object.values(country.currencies);
-    currencies.forEach(element => {
-      this.currency.push(element.name)
-    })
+    if(country.currencies) {
+      let currencies: any = Object.values(country.currencies);
+      currencies.forEach(element => {
+        this.currency.push(element.name)
+      })
+    } else {
+      let currencies = '';
+      this.currency.push(currencies);
+    }
 
-    let languages: any = Object.values(country.languages);
-    languages.forEach(element => {
-      this.language.push(element)
-    })
+    if(country.languages) {
+      let languages: any = Object.values(country.languages);
+      languages.forEach(element => {
+        this.language.push(element)
+      })
+    } else {
+      let languages = '';
+      this.language.push(languages);
+    }
+
 
     let country_details = {
       flag: country.flags.png,

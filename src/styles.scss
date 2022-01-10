@@ -1,1 +1,211 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Nunito Sans Black';
+  src: url(assets/fonts/NunitoSans-Black.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-BlackItalic.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans Bold';
+  src: url(assets/fonts/NunitoSans-Bold.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-ExtraLight.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-ExtraLightItalic.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-Italic.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans Light';
+  src: url(assets/fonts/NunitoSans-Light.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-LightItalic.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans Regular';
+  src: url(assets/fonts/NunitoSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans SemiBold';
+  src: url(assets/fonts/NunitoSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(assets/fonts/NunitoSans-SemiBoldItalic.ttf);
+}
+
+$inside-primary: mat-palette($mat-light-blue);
+$inside-accent: mat-palette($mat-light-blue);
+$inside-warn: mat-palette($mat-red);
+$inside-theme-dark: mat-dark-theme($inside-primary, $inside-accent, $inside-warn);
+$inside-theme-light: mat-light-theme($inside-primary, $inside-accent, $inside-warn);
+
+.color-scheme-dark {
+    @include angular-material-theme($inside-theme-dark);
+    // Example how you can easy add own custom styles
+    .mat-toolbar {
+      background-color: hsl(209, 23%, 22%);
+    }
+    .title {
+      font-family: 'Nunito Sans Bold';
+      font-size: 22px;
+    }
+    .theme_name {
+      font-family: 'Nunito Sans Regular';
+      font-size: 15px;
+    }
+    .mat-drawer-container {
+      background-color:  hsl(207, 26%, 17%);
+    }
+    .info_box {
+      background-color: hsl(209, 23%, 22%);
+    }
+    .content {
+      background-color: hsl(209, 23%, 22%);
+    }
+    .info_item {
+      color: hsl(0deg 0% 74%);
+    }
+    input.form-control {
+      background-color:  hsl(209, 23%, 22%);
+      color: hsl(0, 0%, 100%);
+    }
+    input.form-control::placeholder {
+      color: hsl(0deg 0% 74%);
+    }
+    .mat-form-field.form-field {
+      background-color:  hsl(209, 23%, 22%);
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+      color: hsl(0deg 0% 74%);
+    }
+    .mat-form-field.mat-focused span.mat-form-field-label-wrapper label {
+      color: hsl(0deg 0% 74%);
+    }
+    .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+      color: hsl(0deg 0% 74%);
+    }
+    .mat-select-panel {
+      background: hsl(209, 23%, 22%) !important;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    .mat-option {
+      color: hsl(0deg 0% 74%);
+    }
+    .backBtn {
+      background-color: hsl(209, 23%, 22%) !important;
+      color: #fff;
+    }
+    .btn {
+      background-color: hsl(209, 23%, 22%) !important;
+      color: hsl(0deg 0% 74%);
+    }
+    .item {
+      color: hsl(0deg 0% 90%);
+    }
+    .item2 {
+      color: hsl(0deg 0% 74%);
+    }
+
+}
+
+.color-scheme-light {
+    @include angular-material-theme($inside-theme-light);
+    // Example how you can easy add own custom styles
+    .mat-toolbar {
+      background-color: transparent;
+      color: black;
+      border-bottom: 2px solid #ebebeb;
+    }
+    .title {
+      font-family: 'Nunito Sans Bold';
+      font-size: 22px;
+    }
+    .theme_name {
+      font-family: 'Nunito Sans Regular';
+      font-size: 15px;
+    }
+    .mat-drawer-container {
+      background-color:  rgb(245 245 245);
+    }
+    .flag {
+      border-bottom: 2px solid #f1f1f1;
+    }
+    .info_box {
+      background-color:  #fff;
+    }
+    .content {
+      background-color:  #fff;
+      box-shadow: 0px 1px 3px #e1e1e1;
+    }
+    .info_item {
+      color: hsl(0deg 0% 45%);
+    }
+    input.form-control {
+      background-color:  transparent;
+      box-shadow: 0px 1px 10px #d3cfcf;
+    }
+    input.form-control::placeholder {
+      color: hsl(0deg 0% 45%);
+    }
+    .mat-form-field.mat-focused span.mat-form-field-label-wrapper label {
+      color: hsl(0deg 0% 45%);
+    }
+    .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+      color: hsl(0deg 0% 45%);
+    }
+    .mat-form-field.form-field {
+      background-color:  transparent;
+      box-shadow: 0px 1px 10px #d3cfcf;
+    }
+    .backBtn {
+      background-color: transparent;
+      box-shadow: 0px 1px 10px #b8b6b6;
+    }
+    .btn {
+      background-color: transparent;
+      box-shadow: 0px 1px 10px #b8b6b6;
+    }
+}

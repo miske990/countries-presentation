@@ -1,0 +1,10 @@
+<mat-toolbar>
+    <div class="title">Where in the world?</div>
+    <div style="flex: 1 1 auto;"></div>
+    <mat-list-item *ngFor="let theme of themes" (click)="setTheme(theme.name)" style="margin-left: 30px;">
+        <div style="display: flex;justify-content: center;align-items: center;cursor: pointer;">
+            <span style="margin-right: 5px;display: flex;"><mat-icon class="icon" mat-list-icon>{{theme.icon}}</mat-icon></span>
+            <span class="theme_name">{{theme.name}}</span>
+        </div>
+    </mat-list-item>
+</mat-toolbar>

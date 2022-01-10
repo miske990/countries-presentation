@@ -1,0 +1,7 @@
+<div class="back">
+    <button class="backMapBtn" (click)="back()"><i class="fa fa-long-arrow-left" style="margin-right: 10px;"></i>Back</button>
+</div>
+<agm-map [latitude]="lat" [longitude]="lng">
+
+    <agm-marker [latitude]="lat" [longitude]="lng" [agmFitBounds]="true"></agm-marker>
+</agm-map>

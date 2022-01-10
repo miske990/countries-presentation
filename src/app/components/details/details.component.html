@@ -1,0 +1,64 @@
+<mat-sidenav-container>
+    <mat-sidenav-content>
+        <app-toolbar></app-toolbar>
+        <div class="back">
+            <button class="backBtn" (click)="back()"><i class="fa fa-long-arrow-left"
+                    style="margin-right: 10px;"></i>Back</button>
+        </div>
+        <div *ngIf="message == true" class="message {{storedTheme}}">{{messageText}}</div>
+        <div *ngIf="message == false" class="country_info">
+            <div class="country_flag">
+                <img class="flag" src="{{detailsData.flag}}">
+            </div>
+            <div class="country_details">
+                <div class="country_name">{{detailsData.name}}</div>
+                <div class="details_box">
+                    <div class="box1">
+                        <div class="row">
+                            <span class="item">Native Name:<span class="item2"> {{detailsData.name}}</span></span>
+                        </div>
+                        <div class="row">
+                            <span class="item">Population:<span class="item2"> {{detailsData.population |
+                                    number}}</span></span>
+                        </div>
+                        <div class="row">
+                            <span class="item">Region:<span class="item2"> {{detailsData.region}}</span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <span class="item">Top Level Domain:<span class="item2">
+                                    {{detailsData.domain}}</span></span>
+                        </div>
+                        <div class="row">
+                            <span class="item">Currencies:<span class="item2"> {{detailsData.currency}}</span></span>
+                        </div>
+                        <div class="row">
+                            <span class="item">Languages:<span class="item2"> {{detailsData.language}}</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <span class="item">Sub Region:<span class="item2"> {{detailsData.subregion}}</span></span>
+                    </div>
+                    <div class="row">
+                        <span class="item">Capital:<span class="item2"> {{detailsData.capital}}</span></span>
+                    </div>
+                    <div class="row">
+                        <button class="btn" (click)="viewMap()">View on Map</button>
+                    </div>
+                    <div class="borders">
+                        <span class="item">Border Countries:</span>
+                        <span class="border">
+                            <button *ngFor="let borders of detailsData.borderCountries;let i=index" class="btn"
+                                (click)="details(borders)" id="btn">
+                                {{borders}}
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

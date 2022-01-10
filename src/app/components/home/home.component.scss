@@ -1,0 +1,162 @@
+.mat-sidenav-container {
+    height: 100%;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+
+.content {
+  margin-bottom: 5%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.mat-card {
+  width: 100%;
+}
+
+.flag {
+  min-width: 350px;
+  max-width: 350px;
+  min-height: 206px;
+  max-height: 206px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.info_box {
+  padding: 5%;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.country{
+  font-family: 'Nunito Sans Bold';
+  font-size: 17px;
+}
+
+.info{
+  font-size: 14px;
+  font-family: 'Nunito Sans Regular';
+}
+
+.info_item{
+  font-family: 'Nunito Sans Light';
+  font-size: 14px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input.form-control {
+  font-family: 'Nunito Sans Regular', FontAwesome;
+  border: none;
+  width: 450px;
+  height: 48px;
+  padding-left: 10px;
+  font-size: 14px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+input.form-control::placeholder {
+  font-family: 'Nunito Sans Regular', FontAwesome;
+  padding-left: 10px;
+}
+
+.mat-form-field.form-field {
+  height: 50px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+:host ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+:host ::ng-deep  .mat-form-field-infix{
+  font-family: 'Nunito Sans Regular';
+}
+
+:host ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  font-family: 'Nunito Sans Regular';
+  padding-left: 5px;
+}
+
+:host ::ng-deep .mat-select-value{
+  padding-left: 10px;
+  font-family: 'Nunito Sans Regular';
+}
+
+::ng-deep .mat-select-panel .mat-option-text { 
+  font-size: 14px; 
+  font-family: 'Nunito Sans Regular';
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  input.form-control {
+    width: 350px;
+  }
+  .flex_container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .search {
+    flex-direction: column;
+  }
+
+  input.form-control {
+    width: initial;
+    margin-bottom: 2%;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .title{
+    font-size: 19px;
+  }
+  
+  .flag{
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 150px;
+    max-height: 150px;
+  }
+
+}
+
+

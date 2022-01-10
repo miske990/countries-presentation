@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+
+	<mat-sidenav-content *ngIf="loaded">
+
+		<app-toolbar></app-toolbar>
+		<div class="search">
+			<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+				placeholder="&#61442; Search for a country...">
+			<mat-form-field class="form-field">
+				<mat-select placeholder="Filter by region" (selectionChange)="onSelect($event.value)"
+					disableOptionCentering>
+					<mat-option [value]="null" style="font-family: 'Nunito Sans Regular';">None</mat-option>
+					<mat-option class="not-empty-select" *ngFor="let region of regions" [value]="region">{{region}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+		<div class="flex_container">
+			<div class="content" *ngFor="let country of filteredCountries;let i=index" (click)="details(country)">
+				<img class="flag" src="{{country.flags.png}}">
+				<div class="info_box">
+					<p class="country">{{country.name.common}}</p>
+					<p><span class="info">Population: <span class="info_item">{{country.population |
+								number}}</span></span></p>
+					<p><span class="info">Region: <span class="info_item">{{country.region}}</span></span></p>
+					<p><span class="info">Capital: <span class="info_item">{{country.capital}}</span></span></p>
+				</div>
+			</div>
+		</div>
+
+	</mat-sidenav-content>
+
+</mat-sidenav-container>
